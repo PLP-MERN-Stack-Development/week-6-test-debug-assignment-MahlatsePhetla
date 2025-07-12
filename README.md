@@ -1,88 +1,61 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19921641&assignment_repo_type=AssignmentRepo)
-# Testing and Debugging MERN Applications
+## MERN Stack Blog App
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
+## Project Overview
+This project is a full-stack MERN blog application featuring:
 
-## Assignment Overview
+Backend: Node.js, Express, MongoDB RESTful API with authentication, posts, categories.
 
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+Frontend: React + Vite UI for user login, registration, post listing, and dashboard (work in progress).
 
-## Project Structure
+Testing: Comprehensive backend unit and integration tests with Jest and Supertest.
 
-```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
-```
+Debugging: Implemented global error handling, logging, and testing-based debugging.
 
-## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+## Project Overview
+# This project is a full-stack MERN blog application featuring:
 
-## Files Included
+Backend: Node.js, Express, MongoDB RESTful API with authentication, posts, categories.
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+Frontend: React + Vite UI for user login, registration, post listing, and dashboard (work in progress).
 
-## Requirements
+Testing: Comprehensive backend unit and integration tests with Jest and Supertest.
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+Debugging: Implemented global error handling, logging, and testing-based debugging.
 
-## Testing Tools
+## Basic React app setup with Vite
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
+Login, Register, and Dashboard pages scaffolded
 
-## Submission
+Routing with React Router (including protected routes)
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+API service setup with axios (configured to backend)
 
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
+ Frontend UI & functionality 
 
-## Resources
+## Testing Strategy
+# Backend:
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+Jest + Supertest for unit and integration tests
+
+Tests cover auth, posts, categories, and utility functions
+
+Use of separate test database environment to avoid production data interference
+
+Coverage reports generated to ensure critical features are tested
+
+# Frontend:
+
+Basic testing setup with React Testing Library (planned but not yet fully implemented)
+
+##  Debugging Techniques Implemented
+Centralized error handling middleware on backend
+
+Logging of requests and errors using console and middleware
+
+Jest test suites for identifying and isolating failing logic
+
+Use of Postman and browser dev tools for API and UI debugging
+
+CORS troubleshooting and configuration for smooth frontend-backend integration
+

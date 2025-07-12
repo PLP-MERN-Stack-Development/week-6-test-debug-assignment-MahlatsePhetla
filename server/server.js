@@ -1,24 +1,34 @@
 
 // server/server.js
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const connectDB = require('./src/config/db');
 const postsRouter = require('./src/routes/Posts');
+const authRouter = require('./src/routes/auth');
+const app = require('./src/app');
 
 dotenv.config(); // 
 
-const app = express();
 
 // Connect to MongoDB
 connectDB();
 
 // Middleware
-app.use(cors()); 
+
 app.use(express.json()); 
+
+//cors
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+}));
+
+
 
 // Routes
 app.use('/api/posts', postsRouter);
+app.use('./api/auth', authRouter);
 
 // Error handler (optional)
 app.use((err, req, res, next) => {
